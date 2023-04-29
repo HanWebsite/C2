@@ -80,6 +80,12 @@ npm i hcaptcha-solver
 npm i randomstring
 npm i cluster
 npm i cloudflare-bypasser
+npm i http
+npm i http2
+npm i gradient-string
+npm i tls
+npm i url
+npm i cluster
 pip3 install -r requirements.txt
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 apt-get install ./google-chrome-stable_current_amd64.deb
