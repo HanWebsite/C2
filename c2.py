@@ -761,8 +761,7 @@ PORTS   ► SHOW ALL PORTS
 TOOLS   ► SHOW TOOLS
 CLEAR   ► CLEAR TERMINAL
             ''')
-
-        else:
+                    else:
             try:
                 cmmnd = cnc.split()[0]
                 print("Command: [ " + cmmnd + " ] Not Found!")
@@ -772,8 +771,8 @@ CLEAR   ► CLEAR TERMINAL
 
 def login():
     clear()
-    user = "Han"
-    passwd = "Han"
+    user = "H"
+    passwd = "H"
     username = input("⚡ Username: ")
     password = getpass.getpass(prompt='⚡ Password: ')
     if username != user or password != passwd:
