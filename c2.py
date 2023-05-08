@@ -20,14 +20,13 @@ bots = len(proxys)
 def ascii_vro():
     clear()
     print(f'''
-     / **/|        
-     | == /        
-      |  |         
-      |  |         
-      |  /         
-       |/  
-
-
+    HHHHHHH
+   H        H
+   H        H
+   H        H
+   H        H
+   H        H
+    HHHHHHH
 
 
 
@@ -40,12 +39,13 @@ def ascii_vro():
 
 
 
-     / **/|        
-     | == /        
-      |  |         
-      |  |         
-      |  /         
-       |/  
+    HHHHHHH
+   H        H
+   H  LOL   H
+   H        H
+   H        H
+   H        H
+    HHHHHHH
 
 
     ''')
@@ -59,9 +59,7 @@ def ascii_vro():
 
 
 
-     / **/|        
-     | == /        
-      |  |                  
+    LoL                  
 
     ''')
     time.sleep(0.6)
@@ -70,7 +68,7 @@ def ascii_vro():
 
      _.-^^---....,,--       
  _--                  --_  
-<                        >)
+<      Duar Memek         >)
 |                         | 
  \._                   _./  
     ```--. . , ; .--'''       
@@ -469,12 +467,11 @@ def main():
         elif "tls" in cnc:
             try:
                 url = cnc.split()[3]
-                port = cnc.split()[4]
                 time = cnc.split()[5] 
-                os.system(f'node tls.js {url} {port} {time} 2000')
+                os.system(f'node tls.js {url} {time}')
             except IndexError:
                 print('Usage: tls <url> <time>')
-                print('Example: tls https://1.1.1.1 443 60')
+                print('Example: tls https://1.1.1.1 60')
     
         elif "https-spoof" in cnc:
             try:
