@@ -467,7 +467,7 @@ def main():
         elif "tls" in cnc:
             try:
                 url = cnc.split()[3]
-                time = cnc.split()[5] 
+                time = cnc.split()[4] 
                 os.system(f'node tls.js {url} {time}')
             except IndexError:
                 print('Usage: tls <url> <time>')
@@ -761,7 +761,8 @@ PORTS   ► SHOW ALL PORTS
 TOOLS   ► SHOW TOOLS
 CLEAR   ► CLEAR TERMINAL
             ''')
-                    else:
+
+        else:
             try:
                 cmmnd = cnc.split()[0]
                 print("Command: [ " + cmmnd + " ] Not Found!")
@@ -771,8 +772,8 @@ CLEAR   ► CLEAR TERMINAL
 
 def login():
     clear()
-    user = "H"
-    passwd = "H"
+    user = "Han"
+    passwd = "Han"
     username = input("⚡ Username: ")
     password = getpass.getpass(prompt='⚡ Password: ')
     if username != user or password != passwd:
