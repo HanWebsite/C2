@@ -1,6 +1,6 @@
 <div align=center>
  
-# FREE C2 #
+# Hage C2 #
 
 <p>
  <img src="https://img.shields.io/github/stars/hoaan1995/ZxCDDoS?color=%23DF0067&style=for-the-badge"/> &nbsp;
